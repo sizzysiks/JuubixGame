@@ -1,0 +1,76 @@
+.pop-up-solving{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.pop-up-top{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0 1em;
+}
+.pop-up-top button{
+    background: transparent;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    color: var(--main-clr);
+    font-size: 1.5rem;
+    padding: 0.2em 0.4em;
+}
+.pop-up-top h3{
+    color: var(--main-clr);
+}
+
+.pop-up-questions{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+}
+.pop-up-questions p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.pop-up-img{
+    border-radius: 10px;
+    width: 100%;
+    height: 40%;
+}
+.pop-up-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pop-up-answers{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.pop-up-answers div{
+    border: 1px solid var(--main-clr);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+.pop-up-answers-active{
+    background: var(--main-clr);
+    color: white;
+}

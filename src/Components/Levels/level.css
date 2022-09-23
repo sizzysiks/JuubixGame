@@ -1,0 +1,291 @@
+.level{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background: radial-gradient(circle, rgb(6, 0, 97) 64%, rgb(6, 0, 44) 100%, rgba(58,59,96,1) 100%); */
+}
+
+.level-overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+/* LEVEL HEADER */
+.level-header{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.532);
+}
+
+.lever-header-logo{
+    width: 2.5em;
+    height: 2.5em;
+    overflow: hidden;
+}
+.lever-header-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.level-header h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: white;
+    margin: none;
+}
+
+.level-header-time{
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.level-header-time span{
+    width: 60%;
+    color: white;
+    font-size: 2rem;
+}
+.level-header-clock{
+    width: 40%;
+    font-size: 3rem;
+    color: white;
+}
+
+
+/* LEVEL POINTS */
+.level-points{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+.level-points div{
+    width: 100%;
+    height: 20%;
+    border-radius: 15px 0 0 15px;
+}
+.level-points-creativity{
+    background: rgba(255, 0, 0);
+    transform: translateX(10%);
+}
+.level-points-solving{
+    background: rgba(255, 255, 0);
+    transform: translateX(50%);
+}
+.level-points-speed{
+    background: rgba(0, 128, 0);
+    transform: translateX(90%);
+}
+.level-points-strategy{
+    background: rgba(0, 0, 255);
+}
+
+
+/* LEVEL BUTTONS */
+.level-buttons-bar{
+    width: 100%;
+    height: max-content;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+.level-buttons-bar button{
+    position: relative;
+    width: 2.7em;
+    height: 2.7em;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    color: white;
+}
+.level-buttons-bar button::before{
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: -10px;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 6px solid rgba(255, 255, 255, 0.141);
+    border-radius: 50%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.level-buttons-bar button::after{
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: -10px;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 4px solid rgba(255, 255, 255, 0.482);
+    border-radius: 50%;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+/* LEVEL START */
+.level-start-button-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(0, 0, 0, 0.625);
+    backdrop-filter: blur(2px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.level-start-button{
+    background: #0099ff;
+    box-shadow: inset 5px 5px 11px #003d66,
+                inset -5px -5px 11px #00f5ff;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.level-start-button button{
+    width: 6em;
+    height: 6em;
+    background: hsla(0, 0%, 7%, 1);
+    background: linear-gradient(180deg, hsla(0, 0%, 7%, 1) 0%, hsla(0, 0%, 27%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(0, 0%, 7%, 1) 0%, hsla(0, 0%, 27%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(0, 0%, 7%, 1) 0%, hsla(0, 0%, 27%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#111111", endColorstr="#444444", GradientType=1 );
+    color:#006600;
+    font-size: 1.5rem;
+    border-radius: 50% 50%;
+    border: none;
+    box-shadow: inset 7px 7px 14px #070707,
+    inset -7px -7px 14px #1b1b1b;
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+.level-start-button button:hover{
+    transform: scale(1.1);
+}
+
+/* LEVEL BUTTONS SECOND */
+.level-buttons{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    bottom: 2%;
+    left: 0;
+}
+.level-buttons-horizontal{
+    border-radius: 5px;
+    position: absolute;
+    left: 20px;
+    bottom: 50px;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 0.3em;
+}
+.level-buttons-vertical{
+    border-radius: 5px;
+    position: absolute;
+    left: 60px;
+    bottom: 8px;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 0.3em;
+}
+
+.button-icons{
+    width: 2em;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.437);
+    color: white;
+    font-size: 1rem;
+}
+
+.info-bar{
+    width: 40%;
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1em;
+}
+.info-bar h5{
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.info-bar-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.info-bar-start-btn{
+    width: 5em;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+}
+
+
+/* Game Over */
+.game-over{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    background: white;
+}
+
+.game-over img{
+    width: 100%;
+    object-fit: contain;
+}

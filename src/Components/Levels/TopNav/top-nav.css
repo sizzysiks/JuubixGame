@@ -1,0 +1,124 @@
+.top-nav{
+    position: relative;
+    background: #010101;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    border-radius: 0 0 25px 25px;
+}
+.top-nav img{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.top-nav-level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-nav p{
+    color: white;
+    margin: 0;
+}
+
+
+.top-nav-time-wrapper{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    box-shadow: inset 10px 10px 13px #000019,
+    inset -10px -10px 13px #000063;
+    border-radius: 15px;
+    padding: 0.3em 0.6em;
+}
+.top-nav-timer{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.top-nav-time{
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-nav-time-started{
+    animation: scales 0.5s ease-in-out infinite alternate;
+    -webkit-animation: scales 0.5s ease-in-out infinite alternate;
+}
+.top-nav-time img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@keyframes scales {
+    0% {
+        transform: scale(1.0) rotate(25deg);
+        -webkit-transform: scale(1.0) rotate(25deg);
+    }
+    100% {
+        transform: scale(1.05) rotate(-25deg);
+        -webkit-transform: scale(1.05) rotate(-25deg);
+    }
+}
+
+
+/* Top nav progress */
+.top-nav-progress{
+    height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.top-nav-progress img{
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.top-nav-creativity, .top-nav-strategy, .top-nav-speed, .top-nav-solving{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-nav-creativity-bar, .top-nav-strategy-bar, .top-nav-speed-bar, .top-nav-solving-bar{
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    width: 85%;
+    height: 9px;
+}
+.top-nav-creativity-bar{
+    background: rgb(255, 33, 33);
+    clip-path: polygon(0 0, 60% 0, 60% 100%, 0% 100%);
+}
+.top-nav-strategy-bar{
+    background: rgb(51, 51, 255);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.top-nav-speed-bar{
+    background: rgb(39, 255, 39);
+}
+.top-nav-solving-bar{
+    background: rgb(255, 255, 54);
+    clip-path: polygon(0 0, 10% 0, 10% 100%, 0% 100%);
+}
+
+/* MEDIA QUERIES*/
+@media only screen and (min-width: 480px){
+    .top-nav{
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    .top-nav-time-wrapper{
+        position: absolute;
+        right: 1em;
+    }
+}

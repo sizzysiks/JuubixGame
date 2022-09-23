@@ -1,0 +1,39 @@
+.bottom-nav-wrapper{
+    width: 100%;
+    background: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 1.5em 2em 1em 2em;
+}
+
+.bottom-menu-btn, .bottom-exit-btn{
+    background: #0099ff;
+    box-shadow: inset 26px 26px 34px #0065a8,
+                inset -26px -26px 34px #00cdff;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.bottom-menu-btn:hover, .bottom-exit-btn:hover{
+    transform: scale(1.1);
+}
+
+.bottom-menu-rewind-btn, .bottom-menu-forward-btn, .bottom-menu-controls-btn{
+    background: transparent;
+    border: none;
+    color:  white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.bottom-menu-rewind-btn:hover, .bottom-menu-forward-btn:hover, .bottom-menu-controls-btn:hover{
+    transform: scale(1.1);
+}
+.bottom-menu-controls-btn{
+    font-size: 2rem;
+}

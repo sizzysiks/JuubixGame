@@ -1,0 +1,381 @@
+.level-menu-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    z-index: 2;
+    padding: 1em;
+    transform: scaleX(1) scaleY(1) translateX(-100vw);
+}
+
+.close-menu-btn{
+    position: absolute;
+    top: 5%;
+    border: none;
+    border-radius: 25px;
+    background: #f5e44d;
+    color: #000044;
+    padding: 1em 2em;
+    text-transform: uppercase;
+}
+
+.level-menu-options{
+    background: var(--main-clr);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+    border-radius: 15px;
+}
+.level-menu-options button{
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    gap:1em;
+    cursor: pointer;
+}
+.level-menu-icons{
+    font-size: 2rem;
+}
+
+
+/* Level how to */
+.level-menu-how-to{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    z-index: 3;
+    transform: scaleX(0.5) scaleY(0.5);
+}
+
+
+/* Level music */
+.level-menu-music{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    z-index: 3;
+    transform: scaleX(0.5) scaleY(0.5);
+}
+.level-music-switch-text{
+    position: absolute;
+    bottom: 9%;
+}
+.level-music-switch{
+    position: absolute;
+    bottom: 5%;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.level-music-switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.level-music-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.level-music-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+} 
+input:checked + .level-music-slider {
+    background-color: var(--main-clr);
+} 
+input:focus + .level-music-slider {
+    box-shadow: 0 0 1px var(--main-clr);
+}
+input:checked + .level-music-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.level-music-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+}
+.level-music-options button{
+    background: transparent;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 80%;
+    padding: 0.5em 1em;
+}
+
+
+/* Level rankings */
+.level-menu-rankings{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    z-index: 3;
+    transform: scaleX(0.5) scaleY(0.5);
+}
+.level-rankings-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.level-rankings-categories{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.level-rankings-categories-btn{
+    background: transparent;
+    border: 1px solid var(--main-clr);
+    border-radius: 5px;
+    padding: 0.3em 0.6em;
+    color: var(--main-clr);
+    transition: all 0.3s;
+}
+.level-rankings-categories-active{
+    border-radius: 5px;
+    padding: 0.3em 0.6em;
+    background: var(--main-clr);
+    color: white;
+    border: none;
+}
+
+.level-ranking-single{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0 0.5em;
+    border-radius: 15px;
+}
+.level-ranking-single-active{
+    position: relative;
+    background: var(--main-clr);
+    color: white;
+}
+
+.ranking-single-spot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ranking-single-spot p{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.ranking-single-content{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em;
+}
+.ranking-profile{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.ranking-profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ranking-single-content span{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.level-rankings-player{
+    width: 100%;
+    background: var(--main-clr);
+    border-radius: 25% 25% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+}
+.level-rankings-player h5, h2{
+    margin: 0;
+    color: white;
+}
+
+
+/* Level menu controls */
+.level-menu-controls{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    z-index: 3;
+    transform: scaleX(0.5) scaleY(0.5);
+}
+
+.level-menu-controls-option{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.level-menu-controls-icon{
+    font-size: 2rem;
+}
+.level-menu-controls-option button{
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+
+/* Level menu colors */
+.level-menu-colors{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    z-index: 3;
+    transform: scaleX(0.5) scaleY(0.5);
+}
+.close-colors-btn{
+    position: absolute;
+    top: 5%;
+    border: none;
+    border-radius: 25px;
+    background: #f5e44d;
+    color: #000044;
+    padding: 1em 2em;
+    text-transform: uppercase;
+}
+.level-menu-options-btns{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+}
+.level-menu-options-btns p{
+    width: 100%;
+    color: rgb(63, 63, 63);
+}
+.level-menu-options-text{
+    width: 100%;
+    font-weight: 600;
+    color: black;
+}
+.level-menu-btns{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.level-menu-btns button{
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.level-menu-btns div{
+    border-radius: 50%;
+    border: 1px solid grey;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#none-color{
+    background: transparent;
+}
+#black-color{
+    background: #111111;
+}
+#blue-color{
+    background: #000044;
+}
+#grey-color{
+    background: #d2caca;
+}
+#white-color{
+    background: rgb(248, 243, 243);
+}
